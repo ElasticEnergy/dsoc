@@ -1,6 +1,14 @@
 # dsoc
 An experimental Docker sandbox for OpenCode
 
+# Usage
+
+```bash
+> cd myproj
+> docker sandbox create -t ghcr.io/elasticenergy/dsoc:v1.0 claude .
+> docker sandbox exec -it claude-myproj opencode
+```
+
 # Disclaimer
 
 - No Warranty:
