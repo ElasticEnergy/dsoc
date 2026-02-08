@@ -3,10 +3,17 @@ An experimental Docker sandbox for OpenCode
 
 # Usage
 
-```bash
+start your sandbox:
+
+```powershell
 > cd myproj
-> docker sandbox create -t ghcr.io/elasticenergy/dsoc:v1.0 claude .
-> docker sandbox exec -it claude-myproj opencode
+> docker sandbox run -t ghcr.io/elasticenergy/dsoc:latest claude .
+```
+
+after your sandbox starts:
+
+```
+$ opencode
 ```
 
 # Disclaimer
