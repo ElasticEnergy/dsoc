@@ -7,7 +7,7 @@ start your sandbox:
 
 ```powershell
 > cd myproj
-> docker sandbox run -t ghcr.io/elasticenergy/dsoc:latest claude .
+> docker sandbox run -t ghcr.io/elasticenergy/dsoc:v1.1 claude .
 ```
 
 after your sandbox starts:
