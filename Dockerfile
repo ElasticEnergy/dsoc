@@ -1,6 +1,12 @@
 # https://github.com/anomalyco/opencode/blob/dev/packages/opencode/Dockerfile
 FROM ghcr.io/anomalyco/opencode AS opencode-source
 
+# notes
+# - Using `run` instead of `exec` because `exec` didn't seem to have access to the host filesystem.
+# - The Claude Code option `--dangerously-skip-permissions` is passed through when executing `run`.
+# - Uses a script wrapper to bypass the option and launches tmux for oh-my-opencode integration.
+# - Bundled necessary runtime libraries with the OpenCode binary for compatibility with the Ubuntu-based template.
+
 RUN mkdir -p /tmp/opencode && \
     cp /usr/local/bin/opencode /tmp/opencode && \
     # cp /lib/ld-musl-x86_64.so.1 /tmp/opencode && \
